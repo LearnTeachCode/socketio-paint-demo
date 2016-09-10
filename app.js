@@ -21,13 +21,6 @@ io.on('connection', function(socket) {
 	// Display this message in the server console
 	console.log('A user connected!');
 
-	// When the server receives a message named "new line",
-	socket.on('new line', function(data){
-		// Display the received data in the server console
-		console.log(data);
 
-		// Send the data in a message called "new line" to every connected client EXCEPT the client who sent this initial "new line" message
-		socket.broadcast.emit('new line', data);
-	});
 
 });	// End of SocketIO code
